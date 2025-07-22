@@ -48,6 +48,7 @@ while True:
                     contador += 1
             print(f"Días con ventas mayores a Q1000: {contador}")
         case "6":
+            print("Las ventas se clasifican en: alta (>1000), media (500–1000), baja (<500)")
             for i in range(len(listaVentas)):
                 venta = listaVentas[i]
                 if venta > 1000:

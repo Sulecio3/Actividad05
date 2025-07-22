@@ -9,12 +9,23 @@ while True:
     print("7. Clasificar ventas")
     print("8. salir")
     opcion = int(input("Ingrese una opcion: "))
-
+    listaVentas: []
     match opcion:
         case 1:
-            print("Sumando")
+            cantidad = int(input("Cuantas ventas quiere realizar"))
+            for i in cantidad:
+                venta = int(input("Ingrese su lista de ventas"))
+                if venta > 0:
+                    listaVentas.append(cantidad)
+                    print("Venta ingresada correctamente")
+                else:
+                    print("No se pudo ingresar su venta")
         case 2:
-            print("Restando")
+            if len(listaVentas) == 0:
+                print("No hay ventas")
+            else:
+                for i in listaVentas:
+                    print(f"Sus ventas son: {listaVentas}")
         case 3:
             print("multiplicanco")
         case 4:

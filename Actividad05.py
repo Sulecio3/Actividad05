@@ -1,3 +1,4 @@
+listaVentas = []
 while True:
     print("--MENÚ DE ANÁLISIS DE VENTAS--")
     print("1. Ingresar ventas ")
@@ -7,25 +8,25 @@ while True:
     print("5. Cuantos dias se superaron lo 1000")
     print("6. Clasificar ventas")
     print("7. salir")
-    opcion = int(input("Ingrese una opcion: "))
-    listaVentas: []
+    opcion = input("Ingrese una opcion: ")
+
     match opcion:
-        case 1:
-            cantidad = int(input("Cuantas ventas quiere realizar"))
-            for i in cantidad:
-                venta = int(input("Ingrese su lista de ventas"))
+        case "1":
+            cantidad = int(input("Cuantas ventas quiere realizar: "))
+            for i in range(cantidad):
+                venta = int(input("Ingrese su venta: "))
                 if venta > 0:
-                    listaVentas.append(cantidad)
+                    listaVentas.append(venta)
                     print("Venta ingresada correctamente")
                 else:
                     print("No se pudo ingresar su venta")
-        case 2:
+        case "2":
             if len(listaVentas) == 0:
                 print("No hay ventas")
             else:
                 for i in listaVentas:
-                    print(f"Sus ventas son: {listaVentas}")
-        case 3:
+                    print(f"Sus ventas son: {i}")
+        case "3":
             mayor = listaVentas[0]
             menor = listaVentas[0]
             for i in listaVentas:
@@ -35,19 +36,19 @@ while True:
                     menor = i
                 print(f"La venda mas alta fue: Q{mayor}")
                 print(f"La venta más baja fue: Q{menor}")
-        case 4:
+        case "4":
             suma=0
             for i in listaVentas:
                 suma += i
                 promedio = suma/len(listaVentas)
                 print(f"El promedio de las ventas es: {promedio}")
-        case 5:
+        case "5":
             contador = 0
             for i in listaVentas:
                 if i > 1000:
                     contador += 1
             print(f"Días con ventas mayores a Q1000: {contador}")
-        case 6:
+        case "6":
             for i in range(len(listaVentas)):
                 venta = listaVentas[i]
                 if venta > 1000:
@@ -57,7 +58,7 @@ while True:
                 else:
                     clasificacion = "Baja"
                 print(f"Venta Q{venta}: {clasificacion}")
-        case 7:
+        case "7":
             print("Salir")
             break
         case _:

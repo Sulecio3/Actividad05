@@ -42,9 +42,21 @@ while True:
                 promedio = suma/len(listaVentas)
                 print(f"El promedio de las ventas es: {promedio}")
         case 5:
-            print("salir")
+            contador = 0
+            for i in listaVentas:
+                if i > 1000:
+                    contador += 1
+            print(f"Días con ventas mayores a Q1000: {contador}")
         case 6:
-            print("salir")
+            for i in range(len(listaVentas)):
+                venta = listaVentas[i]
+                if venta > 1000:
+                    clasificacion = "Alta"
+                elif venta >= 500:
+                    clasificacion = "Media"
+                else:
+                    clasificacion = "Baja"
+                print(f"Venta Q{venta}: {clasificacion}")
         case 7:
             print("Salir")
             break

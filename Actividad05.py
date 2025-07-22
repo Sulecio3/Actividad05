@@ -27,7 +27,7 @@ while True:
                 for i in listaVentas:
                     print(f"Sus ventas son: {listaVentas}")
         case 3:
-            print("multiplicanco")
+            print("hola")
         case 4:
             print("dividiendo")
         case 5:

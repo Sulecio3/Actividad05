@@ -5,9 +5,8 @@ while True:
     print("3. Venta mas alta y venta mas baja")
     print("4. Promedio de ventas")
     print("5. Cuantos dias se superaron lo 1000")
-    print("6. Buscar Venta especifica")
-    print("7. Clasificar ventas")
-    print("8. salir")
+    print("6. Clasificar ventas")
+    print("7. salir")
     opcion = int(input("Ingrese una opcion: "))
     listaVentas: []
     match opcion:
@@ -27,10 +26,26 @@ while True:
                 for i in listaVentas:
                     print(f"Sus ventas son: {listaVentas}")
         case 3:
-            print("hola")
+            mayor = listaVentas[0]
+            menor = listaVentas[0]
+            for i in listaVentas:
+                if i > mayor:
+                    mayor = i
+                if i < menor:
+                    menor = i
+                print(f"La venda mas alta fue: Q{mayor}")
+                print(f"La venta más baja fue: Q{menor}")
         case 4:
-            print("dividiendo")
+            suma=0
+            for i in listaVentas:
+                suma += i
+                promedio = suma/len(listaVentas)
+                print(f"El promedio de las ventas es: {promedio}")
         case 5:
+            print("salir")
+        case 6:
+            print("salir")
+        case 7:
             print("Salir")
             break
         case _:

@@ -24,8 +24,7 @@ while True:
             if len(listaVentas) == 0:
                 print("No hay ventas")
             else:
-                for i in listaVentas:
-                    print(f"Sus ventas son: {i}")
+                print(f"Sus ventas son: {listaVentas}")
         case "3":
             mayor = listaVentas[0]
             menor = listaVentas[0]
@@ -34,18 +33,18 @@ while True:
                     mayor = i
                 if i < menor:
                     menor = i
-                print(f"La venda mas alta fue: Q{mayor}")
-                print(f"La venta más baja fue: Q{menor}")
+            print(f"La venta más alta fue: Q{mayor}")
+            print(f"La venta más baja fue: Q{menor}")
         case "4":
             suma=0
             for i in listaVentas:
                 suma += i
-                promedio = suma/len(listaVentas)
-                print(f"El promedio de las ventas es: {promedio}")
+            promedio = suma/len(listaVentas)
+            print(f"El promedio de las ventas es: {promedio}")
         case "5":
             contador = 0
             for i in listaVentas:
-                if i > 1000:
+                if i >= 1000:
                     contador += 1
             print(f"Días con ventas mayores a Q1000: {contador}")
         case "6":
